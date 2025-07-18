@@ -1,11 +1,13 @@
-# README.md
+# SentinelX Web Uygulaması / SentinelX Web Application
 
-# SentinelX Web Uygulaması
+---
 
-## Genel Bakış
-SentinelX Web Uygulaması, kullanıcıların SentinelX ekibiyle iletişime geçmesini kolaylaştırmak için tasarlanmış bir web uygulamasıdır. Kullanıcılar, iletişim formu aracılığıyla mesaj gönderebilir ve bu mesajlar veritabanında saklanır. Ayrıca ekip için haberler paylaşılabilir ve bu haberler de veritabanında saklanır. Ekip üyeleri hakkında bilgiler de uygulama üzerinden görüntülenebilir.
+## Türkçe
 
-## Proje Yapısı
+### Genel Bakış
+SentinelX Web Uygulaması, kullanıcıların SentinelX ekibiyle iletişime geçmesini kolaylaştırmak için tasarlanmış bir web uygulamasıdır. Kullanıcılar, iletişim formu aracılığıyla mesaj gönderebilir ve bu mesajlar MySQL veritabanında saklanır. Ayrıca ekip için haberler paylaşılabilir ve bu haberler de veritabanında saklanır. Ekip üyeleri hakkında bilgiler de uygulama üzerinden görüntülenebilir.
+
+### Proje Yapısı
 Proje aşağıdaki gibi organize edilmiştir:
 
 ```
@@ -26,7 +28,7 @@ sentinelx-web-app
 │   └── views
 │       └── contact.php   # İletişim formunu gösterir ve mesajları işler
 ├── ekip
-│   └── ...               # Ekip üyeleriyle ilgili ek PHP dosyaları (varsa)
+│   └── ...               # Ekip üyeleriyle ilgili profil fotoğrafları (varsa)
 ├── haberler.php          # Tüm haberlerin ve slayt gösterisinin listelendiği sayfa
 ├── haber.php             # Tek bir haberin detayını gösteren sayfa
 ├── ekip.php              # Ekip üyelerinin listelendiği sayfa
@@ -40,7 +42,7 @@ sentinelx-web-app
 └── README.md             # Proje dokümantasyonu
 ```
 
-### Önemli Sayfalar ve Dosyalar
+#### Önemli Sayfalar ve Dosyalar
 
 - **haberler.php**: Tüm haberlerin kartlar halinde ve üstte slayt gösterisiyle listelendiği sayfa. Her habere tıklayarak detayına ulaşabilirsiniz.
 - **haber.php**: Seçilen bir haberin başlık, içerik, görsel ve eklenme tarihiyle detaylı olarak gösterildiği sayfa.
@@ -51,7 +53,7 @@ sentinelx-web-app
 - **haber.js**: Slayt gösterisi ve haberler sayfası için gerekli JavaScript fonksiyonlarını içerir.
 - **404.shtml**: Projede bir sayfa bulunamazsa gösterilecek özel hata sayfasıdır. Kullanıcıya "404 - Sayfa Bulunamadı" mesajı gösterir.
 
-## Kurulum Talimatları
+### Kurulum Talimatları
 
 1. **Depoyu Klonlayın**
    ```bash
@@ -74,8 +76,90 @@ sentinelx-web-app
    - Proje klasörünü sunucunun kök dizinine (ör. XAMPP için `htdocs`) yerleştirin.
    - Web tarayıcınızda `http://localhost/sentinelx-web-app/public/index.html` adresine gidin.
 
-## Kullanım
+### Kullanım
 - Web uygulamasındaki iletişim formuna gidin.
 - Adınızı, e-posta adresinizi ve mesajınızı girin.
 - Formu göndererek mesajınızı SentinelX ekibine iletebilirsiniz.
 - Haberler ve ekip sayfalarına menüden ulaşabilirsiniz.
+
+---
+
+## English
+
+### Overview
+SentinelX Web Application is designed to make it easy for users to contact the SentinelX team. Users can send messages via the contact form, and these messages are stored in a MySQL database. News for the team can also be shared and stored in the database. Information about team members can be viewed through the application.
+
+### Project Structure
+The project is organized as follows:
+
+```
+sentinelx-web-app
+├── public
+│   ├── index.html        # Main HTML file of the web application
+│   ├── index.css         # Styles for HTML elements
+│   ├── index.js          # Frontend logic and form submission
+│   └── img
+│       └── logo.png      # Logo used in the application
+├── src
+│   ├── config
+│   │   └── database.php  # Database connection settings
+│   ├── controllers
+│   │   └── ContactController.php  # Contact form operations
+│   ├── models
+│   │   └── Contact.php   # Contact data structure
+│   └── views
+│       └── contact.php   # Displays the contact form and handles messages
+├── ekip
+│   └── ...               # Profil pictures related to team members (if any)
+├── haberler.php          # Page listing all news and the slideshow
+├── haber.php             # Page showing the details of a single news item
+├── ekip.php              # Page listing team members
+├── get_news.php          # API file returning news as JSON (for AJAX)
+├── style.css             # General stylesheet
+├── haber.css             # Special stylesheet for news detail page
+├── haber.js              # JavaScript file for slideshow and news
+├── .htaccess             # Apache server configuration
+├── composer.json         # Composer configuration file
+├── 404.shtml             # 404 error page (for not found pages)
+└── README.md             # Project documentation
+```
+
+#### Key Pages and Files
+
+- **haberler.php**: Page listing all news as cards and with a slideshow at the top. You can click on any news to see its details.
+- **haber.php**: Page showing the details of a selected news item, including title, content, image, and date.
+- **ekip.php**: Page listing team members with their photo, name, department, role, and contact information.
+- **ekip/**: Folder containing additional PHP files or components related to team members.
+- **get_news.php**: API file that provides news in JSON format and is used for dynamic AJAX news loading.
+- **style.css / haber.css**: Stylesheets for the visual layout of the pages.
+- **haber.js**: JavaScript functions for the slideshow and news page.
+- **404.shtml**: Custom error page shown when a page is not found. Displays "404 - Page Not Found" message.
+
+### Installation Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd sentinelx-web-app
+   ```
+
+2. **Install Dependencies**
+   Make sure Composer is installed, then run:
+   ```bash
+   composer install
+   ```
+
+3. **Database Configuration**
+   - Create a MySQL database for the application.
+   - Update the database connection settings in `src/config/database.php` with your own information.
+
+4. **Run the Application**
+   - Use a local server like XAMPP or MAMP to run the application.
+   - Place the project folder in your server's root directory (e.g., `htdocs` for XAMPP).
+   - Open `http://localhost/sentinelx-web-app/public/index.html` in your web browser.
+
+### Usage
+- Go to the contact form in the web application.
+- Enter your name, email address, and message.
+- Submit the form to send your message to the SentinelX team.
+- You can access the news and team
