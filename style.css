@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("img/arkaplan2.jpg") no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Geri butonunun görünürlüğünü sağlamak için z-index ekledik */
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    background: #034a5a;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11; /* Geri butonunun görünürlüğünü sağlamak için z-index ekledik */
+}
+
+.back-button:hover {
+    background: #02343a;
+    transform: scale(1.1);
+}
+
+.back-button i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: 60px auto; /* Üstte ve altta boşluk bırakmak için margin ekledik */
+    max-width: 80%; /* Solda ve sağda boşluk bırakmak için genişliği %80 yaptık */
+    padding: 20px; /* Etrafına boşluk ekledik */
+    box-sizing: border-box; /* Padding'in genişliğe dahil edilmesi için */
+}
+.slideshow-container .info {
+    background: #fff;
+    color: #111;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px; /* Köşeleri yuvarlattık */
+    height: 20px; /* Resim ile aynı yükseklik */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* İçeriği dikeyde ortalamak için justify-content kullanıldı */
+    align-items: center; /* İçeriği yatayda ortalamak için align-items kullanıldı */
+}
+.slideshow-container .text {
+    margin-top: center;
+    font-weight: bold;
+    margin: 0 auto;
+    color: #111;
+    font-size: 20px;
+    @media (max-width: 800px) {
+        font-size: 16px;
+    }
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Slideshow images */
+.mySlides img {
+    width: 100%;
+    height: 450px; /* Sabit bir yükseklik belirledik */
+    object-fit: cover; /* Resimlerin kapsayıcıya sığması için */
+    border-radius: 10px; /* Köşeleri yuvarlattık */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    font-style: bold;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* News list container */
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* News item card */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    width: calc(33.333% - 40px); /* Genişliği 3 kartın sığacağı şekilde ayarladık */
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 250px; /* Sabit bir yükseklik belirledik */
+    object-fit: cover; /* Resimlerin kapsayıcıya sığması için */
+}
+
+.card .info {
+    padding: 20px;
+    flex: 1; /* Kart içeriğinin eşit boyutta olmasını sağlamak için flex kullanıldı */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .info h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.card .info p {
+    color: #777;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.card .info button {
+    margin: 0 auto;
+    background: #046075;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    align-self: flex-start; /* Butonun kartın alt kısmında olmasını sağlamak için align-self kullanıldı */
+}
+
+.card .info button:hover {
+    background: #034a5a;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .card {
+        width: 90%;
+    }
+}

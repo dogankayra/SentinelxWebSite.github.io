@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="shortcut icon" type="image/png" href="img/logo.png"/>   <!-- favicon ekleme -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SENTINELX</title>
+    <!-- Animasyonlar için harici CSS dosyası -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- Başlık ve menü fontu için Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <!-- jQuery kütüphanesi -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Font Awesome ikonları için harici CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Sayfa için özel stil dosyası -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Yükleniyor animasyonu -->
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <!-- Partikül animasyonu için alan -->
+    <div id="particles-js"></div>
+    <!-- Arka plan kutuları (animasyonlu) -->
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <!-- Ana menü bağlantıları -->
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">hakkımızda</a>
+    <a id="work" href="ekip.php" class="animated fadeIn" style="animation-delay:2.2s;">ekibimiz</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">iletişim</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1>
+            <!-- Logo başlığı harf harf renklendirilmiş -->
+            <span class="white">S</span>
+            <span class="white">E</span>
+            <span class="white">N</span>
+            <span class="white">T</span>
+            <span class="white">I</span>
+            <span class="white">N</span>
+            <span class="white">E</span>
+            <span class="white">L</span>
+            <span class="red"> X</span>
+        </h1>
+        <h2>Hava Savunma Sistemleri</h2>  
+        <h2><a href="haberler.php" style="color: white;">Haberler</a></h2>
+        <div id="menu">
+            <!-- Menü bağlantıları -->
+            <a onclick="showabout()">Hakkımızda</a>
+            <a href="ekip.php">Ekibimiz</a>
+            <a onclick="showcontact()">İletişim</a>
+        </div>
+        <table>
+            <tr>
+                <!-- Sosyal medya ikonları -->
+                <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://www.instagram.com/sentinelx_0" target="_blank"><i class="fab fa-instagram"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="mailto:sentinelx@outlook.com.tr"><i class="fas fa-envelope"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Ekibimiz popup alanı -->
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>Ekibimiz</h1>
+        <!-- Proje örnekleri buraya eklenebilir -->
+    </div>
+    <!-- Hakkımızda popup alanı -->
+    <div id="about_container" class="container">
+        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+        <h1>Hakkımızda</h1>
+        <section>
+            <h2>Hakkımızda</h2>
+            <p>
+                Sentinel X, savunma teknolojilerine ilgi duyan üniversite öğrencilerinden oluşan bir ekip olarak Teknofest Hava Savunma Yarışması’na katılmak için bir araya geldi. Amacımız, yapay zeka ve ileri mühendislik çözümlerini kullanarak hava savunma sistemlerine yenilikçi bir bakış açısı kazandırmak.
+            </p>
+            <p>
+                Misyonumuz, öğrenci olarak edindiğimiz teorik bilgileri gerçek projelere dönüştürerek savunma sanayii alanında kendimizi geliştirmek ve ülkemizin teknoloji ekosistemine katkı sağlamaktır.
+            </p>
+            <p>
+                Vizyonumuz, genç mühendisler olarak hava savunma teknolojilerinde fark yaratacak projeler üretmek ve geleceğin savunma sistemlerine yön veren isimler arasında yer almak.
+            </p>
+        </section>
+        <section>
+            <h2>Çalışma Alanlarımız:</h2>
+            <p>Otonom sistemler</p>
+            <p>Yapay zeka sistemleri</p>
+            <p>Hızlı ve hassas görüntü işleme algoritmaları</p>
+            <p>Gömülü sistemler ve donanım entegrasyonu</p>
+            <p>GUI sistemleri</p>
+        </section>
+    </div>
+    <!-- İletişim popup alanı -->
+    <div id="contact_container" class="container">
+        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+        <h1>İletişim</h1>
+        <section>
+            <h2>Bizimle İletişime Geçin</h2>
+            <p>
+                <!-- İletişim formu -->
+                <form method="POST" action="src/views/contact.php">
+                    <input type="text" name="name" placeholder="İsim" required>
+                    <input type="email" name="email" placeholder="E-mail" required><br>
+                    <textarea name="message" placeholder="Mesajınız" required rows="5"></textarea><br>
+                    <button type="submit" class="btn_one">Gönder</button>
+                </form>
+            </p>
+        </section>
+    </div>
+    <div id="footer"></div>
+    <!-- Sayfa için özel JS dosyaları -->
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
