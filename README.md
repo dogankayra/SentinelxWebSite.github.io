@@ -5,7 +5,7 @@
 ## Türkçe
 
 ### Genel Bakış
-SentinelX Web Uygulaması, kullanıcıların SentinelX ekibiyle iletişime geçmesini kolaylaştırmak için tasarlanmış bir web uygulamasıdır. Kullanıcılar, iletişim formu aracılığıyla mesaj gönderebilir ve bu mesajlar MySQL veritabanında saklanır. Ayrıca ekip için haberler paylaşılabilir ve bu haberler de veritabanında saklanır. Ekip üyeleri hakkında bilgiler de uygulama üzerinden görüntülenebilir.
+SentinelX Web Uygulaması, kullanıcıların SentinelX ekibiyle iletişime geçmesini kolaylaştırmak için tasarlanmış bir web uygulamasıdır. Kullanıcılar, iletişim formu aracılığıyla mesaj gönderebilir ve bu mesajlar veritabanında saklanır. Ayrıca ekip için haberler paylaşılabilir ve bu haberler de veritabanında saklanır. Ekip üyeleri hakkında bilgiler de uygulama üzerinden görüntülenebilir.
 
 ### Proje Yapısı
 Proje aşağıdaki gibi organize edilmiştir:
@@ -87,7 +87,7 @@ sentinelx-web-app
 ## English
 
 ### Overview
-SentinelX Web Application is designed to make it easy for users to contact the SentinelX team. Users can send messages via the contact form, and these messages are stored in a MySQL database. News for the team can also be shared and stored in the database. Information about team members can be viewed through the application.
+SentinelX Web Application is designed to make it easy for users to contact the SentinelX team. Users can send messages via the contact form, and these messages are stored in a database. News for the team can also be shared and stored in the database. Information about team members can be viewed through the application.
 
 ### Project Structure
 The project is organized as follows:
