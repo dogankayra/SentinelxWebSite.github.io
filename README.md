@@ -12,12 +12,9 @@ Proje aşağıdaki gibi organize edilmiştir:
 
 ```
 sentinelx-web-app
-├── public
-│   ├── index.html        # Web uygulamasının ana HTML dosyası
-│   ├── index.css         # HTML elemanlarının stilleri
-│   ├── index.js          # Ön yüz mantığı ve form gönderimi
-│   └── img
+└── img
 │       └── logo.png      # Uygulamada kullanılan logo
+│
 ├── src
 │   ├── config
 │   │   └── database.php  # Veritabanı bağlantı ayarları
@@ -27,8 +24,13 @@ sentinelx-web-app
 │   │   └── Contact.php   # İletişim verisinin yapısı
 │   └── views
 │       └── contact.php   # İletişim formunu gösterir ve mesajları işler
+│ 
 ├── ekip
 │   └── ...               # Ekip üyeleriyle ilgili profil fotoğrafları (varsa)
+│
+├── index.html            # Web uygulamasının ana HTML dosyası
+├── index.css             # HTML elemanlarının stilleri
+├── index.js              # Ön yüz mantığı ve form gönderimi
 ├── haberler.php          # Tüm haberlerin ve slayt gösterisinin listelendiği sayfa
 ├── haber.php             # Tek bir haberin detayını gösteren sayfa
 ├── ekip.php              # Ekip üyelerinin listelendiği sayfa
@@ -94,12 +96,10 @@ The project is organized as follows:
 
 ```
 sentinelx-web-app
-├── public
-│   ├── index.html        # Main HTML file of the web application
-│   ├── index.css         # Styles for HTML elements
-│   ├── index.js          # Frontend logic and form submission
-│   └── img
+
+└── img
 │       └── logo.png      # Logo used in the application
+│
 ├── src
 │   ├── config
 │   │   └── database.php  # Database connection settings
@@ -109,8 +109,13 @@ sentinelx-web-app
 │   │   └── Contact.php   # Contact data structure
 │   └── views
 │       └── contact.php   # Displays the contact form and handles messages
+│
 ├── ekip
 │   └── ...               # Profil pictures related to team members (if any)
+│
+├── index.html            # Main HTML file of the web application
+├── index.css             # Styles for HTML elements
+├── index.js              # Frontend logic and form submission
 ├── haberler.php          # Page listing all news and the slideshow
 ├── haber.php             # Page showing the details of a single news item
 ├── ekip.php              # Page listing team members
