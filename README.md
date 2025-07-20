@@ -71,7 +71,7 @@ sentinelx-web-app
 
 3. **Veritabanı Yapılandırması**
    - Uygulama için bir MySQL veritabanı oluşturun.
-   - `src/config/database.php` dosyasındaki veritabanı bağlantı ayarlarını kendi bilgilerinizle güncelleyin.
+   - `src/config/database.php` dosyasındaki veritabanı bağlantı ayarlarını kendi bilgileriniz ile güncelleyin.
 
 4. **Uygulamayı Çalıştırın**
    - Uygulamayı çalıştırmak için XAMPP veya MAMP gibi bir yerel sunucu kullanabilirsiniz.
